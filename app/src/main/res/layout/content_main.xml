@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <!--<TextView
         android:id="@+id/central_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +16,228 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <EditText
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_marginTop="25dp"
+        android:id="@+id/result_et"
+        android:textSize="21sp"
+        android:gravity="end|center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/num_1_tv"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:maxLines="4" />
+
+    <TextView
+        android:id="@+id/num_1_tv"
+        android:padding="25dp"
+        android:textSize="30sp"
+        android:text="1"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_et"
+        android:layout_width="wrap_content"
+        android:onClick="clickListner"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/num_2_tv"
+        android:padding="25dp"
+        android:textSize="30sp"
+        android:text="2"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/num_1_tv"
+        app:layout_constraintEnd_toStartOf="@id/num_3_tv"
+        app:layout_constraintTop_toBottomOf="@id/result_et"
+        android:onClick="clickListner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/num_3_tv"
+        android:padding="25dp"
+        android:textSize="30sp"
+        android:text="3"
+        android:onClick="clickListner"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/num_2_tv"
+        app:layout_constraintEnd_toStartOf="@id/plus__tv"
+        app:layout_constraintTop_toBottomOf="@id/result_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/num_4_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="4"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_1_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_1_tv" />
+    <TextView
+        android:id="@+id/num_5_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="5"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_2_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_2_tv" />
+    <TextView
+        android:id="@+id/num_6_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="6"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_3_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_3_tv" />
+    <TextView
+        android:id="@+id/num_7_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="7"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_4_tv"
+        app:layout_constraintBottom_toTopOf="@id/num_decimal_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_4_tv" />
+    <TextView
+        android:id="@+id/num_8_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="8"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/num_0_tv"
+        app:layout_constraintStart_toStartOf="@id/num_5_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_5_tv" />
+    <TextView
+        android:id="@+id/num_9_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:padding="25dp"
+        android:text="9"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/num_equals_tv"
+        app:layout_constraintStart_toStartOf="@id/num_6_tv"
+        app:layout_constraintTop_toBottomOf="@id/num_6_tv" />
+    <TextView
+        android:id="@+id/num_decimal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="25dp"
+        android:text="."
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/num_7_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_7_tv" />
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:id="@+id/num_0_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="25dp"
+        android:text="0"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_8_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_8_tv" />
+    <TextView
+        android:layout_marginBottom="15dp"
+
+        android:id="@+id/num_equals_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="25dp"
+        android:text="="
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/num_9_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_9_tv" />
+    <TextView
+        android:id="@+id/plus__tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:padding="25dp"
+        android:text="+"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/num_3_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_et" />
+
+    <TextView
+        android:id="@+id/minus__tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:padding="25dp"
+        android:text="-"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/num_6_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plus__tv" />
+
+    <TextView
+        android:id="@+id/multiply__tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:padding="25dp"
+        android:text="*"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/num_9_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minus__tv" />
+
+    <TextView
+        android:id="@+id/divide__tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:padding="25dp"
+        android:text="/"
+        android:onClick="clickListner"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/num_equals_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/multiply__tv" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
