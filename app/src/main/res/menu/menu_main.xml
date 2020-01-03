@@ -13,9 +13,14 @@
         android:title="HarcCode"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_blabla"
+        android:id="@+id/my_Order"
         android:orderInCategory="100"
-        android:title="Hardcoded"
+        android:title="Orders"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/search_History"
+        android:orderInCategory="100"
+        android:title="History"
         app:showAsAction="never" />
 
 
